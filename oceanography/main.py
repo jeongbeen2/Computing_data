@@ -56,20 +56,33 @@
 # result = numpy.mean(temp)
 
 # print(result)
-import numpy
+# import numpy
 
-temp = [22, 22.5, 23, 22, -999, 22.5, -999, 24, 26, 27, -999, 26.5]
-# missing = []
-# for i in temp:
-#     if i == -999:
-#         a = temp.index(-999)
-#         missing.append(a)
-#         temp.remove(-999)
-# mean = round(numpy.mean(temp), 1)
+# temp = [22, 22.5, 23, 22, -999, 22.5, -999, 24, 26, 27, -999, 26.5]
+# # missing = []
+# # for i in temp:
+# #     if i == -999:
+# #         a = temp.index(-999)
+# #         missing.append(a)
+# #         temp.remove(-999)
+# # mean = round(numpy.mean(temp), 1)
 
-# print("The Missing Data index is :", *missing)
-# print(f"The mean value : {mean}")
+# # print("The Missing Data index is :", *missing)
+# # print(f"The mean value : {mean}")
 
-temp_np = numpy.array(temp)
 
-print(temp_np == -999)
+# temp_np = numpy.array(temp)
+
+# idx = temp_np != -999
+
+# # print(temp_np[idx])
+
+# print(id(idx))
+# print(id(temp_np != -999))
+from copy import copy
+
+a = [1, 2, 3]
+b = copy(a)
+a[2] = 10
+
+print(a, b)
