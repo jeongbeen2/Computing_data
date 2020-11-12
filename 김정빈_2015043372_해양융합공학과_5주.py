@@ -5,7 +5,8 @@ while True:
 
     if ch == "+":
         print("%d + %d = %d 입니다." % (a, b, a + b))
-        break  # break를 해주지 않으면 잘못된 값을 입력할 때 까지 while문이 무한으로 돌아감.
+        break
+        # break를 해주지 않으면 Error가 날 때까지 while문이 무한으로 돌아감.
     elif ch == "-":
         print("%d - %d = %d 입니다." % (a, b, a - b))
         break
@@ -13,15 +14,15 @@ while True:
         print("%d * %d = %d 입니다." % (a, b, a * b))
         break
     elif ch == "/":
-        print("%d / %d = %d 입니다." % (a, b, a / b))
+        print("%d / %d = %s 입니다." % (a, b, a / b))
         break
+        # %d 는 정수형 인자만 받기 때문에, 나누는 부분은 %d보다 %.1f, 혹은 %s를 써야 더 자세히 나온다.
     elif ch == "//":
         print("%d // %d = %d 입니다." % (a, b, a // b))
         break
     elif ch == "%":
-        print(
-            "%d %% %d = %d 입니다." % (a, b, a % b)
-        )  # print 내에있는 %는 %d와 겹치므로, %%를 사용해 주어야함.
+        print("%d %% %d = %d 입니다." % (a, b, a % b))
+        # print 내에있는 연산자 %는 %d의 %와 겹치므로, %%을 사용해 주어야함.
         break
     elif ch == "**":
         print("%d ** %d = %d 입니다." % (a, b, a ** b))
