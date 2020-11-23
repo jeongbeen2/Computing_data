@@ -13,10 +13,24 @@ def dohyeong(n):
 def circle():
     t.bgcolor("black")
     t.color("green")
-    t.speed(1)
+    t.speed(0)
     for i in range(50):
         t.circle(80)
         t.left(360 / 50)
 
 
-circle()
+def diTri():
+    t.speed(0)
+    t.right(120)
+    for i in range(200):
+        if i % 3 == 0:
+            t.color("red")
+        if i % 3 == 1:
+            t.color("yellow")
+        if i % 3 == 2:
+            t.color("blue")
+        t.forward(i * 4)
+        t.left(121)
+
+
+diTri()
