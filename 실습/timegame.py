@@ -7,8 +7,7 @@ start = time.time()
 input(f"{times}초뒤 눌러보세요.")
 end = time.time()
 total = round((end - start), 2)
-error = abs(times - total)
-
+error = round(abs(times - total), 2)
 if error < 0.5:
     print(f"오차는 {error}초로, 잘 하셨네요!")
 
